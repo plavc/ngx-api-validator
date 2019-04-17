@@ -1,0 +1,41 @@
+{
+  "$ref": "#/definitions/IAddress",
+  "definitions": {
+    "IAddress": {
+      "title": "IAddress",
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "title": "street"
+        },
+        "city": {
+          "type": "string",
+          "title": "city"
+        },
+        "postalCode": {
+          "type": "string",
+          "title": "postalCode"
+        },
+        "country": {
+          "type": "string",
+          "title": "country"
+        }
+      },
+      "additionalProperties": false,
+      "propertyOrder": [
+        "street",
+        "city",
+        "postalCode",
+        "country"
+      ],
+      "required": [
+        "city",
+        "country",
+        "postalCode",
+        "street"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@plavc/ngx-api-validator",
+  "version": "1.0.0",
+  "private": false,
+  "author": "Gregor Plavčak <gregor@plavcak.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plavc/ngx-api-validator/issues"
+  },
+  "homepage": "https://github.com/plavc/ngx-api-validator#readme",
+  "keywords": [
+    "typescript",
+    "json",
+    "schema",
+    "validation",
+    "generation",
+    "angular"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "@plavc/ts-api-validator": "^1.0.2",
+    "ajv": "^6.10.0"
+  }
+}

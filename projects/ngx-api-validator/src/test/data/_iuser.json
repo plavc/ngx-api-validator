@@ -1,0 +1,98 @@
+{
+  "$ref": "#/definitions/IUser",
+  "definitions": {
+    "IAddress": {
+      "title": "IAddress",
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "title": "street"
+        },
+        "city": {
+          "type": "string",
+          "title": "city"
+        },
+        "postalCode": {
+          "type": "string",
+          "title": "postalCode"
+        },
+        "country": {
+          "type": "string",
+          "title": "country"
+        }
+      },
+      "additionalProperties": false,
+      "propertyOrder": [
+        "street",
+        "city",
+        "postalCode",
+        "country"
+      ],
+      "required": [
+        "city",
+        "country",
+        "postalCode",
+        "street"
+      ]
+    },
+    "IUser": {
+      "title": "IUser",
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "title": "firstName"
+        },
+        "lastName": {
+          "type": "string",
+          "title": "lastName"
+        },
+        "birthDate": {
+          "$ref": "#/definitions/Date",
+          "title": "birthDate"
+        },
+        "gender": {
+          "type": "number",
+          "title": "gender"
+        },
+        "linkedinProfile": {
+          "type": "string",
+          "title": "linkedinProfile"
+        },
+        "email": {
+          "type": "string",
+          "title": "email"
+        },
+        "address": {
+          "$ref": "#/definitions/IAddress",
+          "title": "address"
+        }
+      },
+      "additionalProperties": false,
+      "propertyOrder": [
+        "firstName",
+        "lastName",
+        "birthDate",
+        "gender",
+        "linkedinProfile",
+        "email",
+        "address"
+      ],
+      "required": [
+        "address",
+        "birthDate",
+        "firstName",
+        "gender",
+        "lastName"
+      ]
+    },
+    "Date": {
+      "description": "Enables basic storage and retrieval of dates and times.",
+      "title": "Date",
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
