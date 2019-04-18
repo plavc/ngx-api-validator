@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish-lib": "npm publish dist/ngx-api-validator --access=public",
+    "build_lib": "ng build ngx-api-validator",
+    "copy-license": "cp LICENSE dist/ngx-api-validator",
+    "copy-files": "npm run copy-license",
+    "npm_pack": "cd dist/ngx-api-validator && npm pack",
+    "package": "npm run build_lib && npm run copy-files"
   },
   "private": true,
   "dependencies": {
